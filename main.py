@@ -7,8 +7,12 @@ import base64
 from telegram import *
 from telegram.ext import *
 import os
+from dotenv import load_dotenv
+import os
 
-TELEGRAM_TOKEN = '###'
+load_dotenv()
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -47,7 +51,7 @@ async def hi(update: Update, context: ContextTypes.DEFAULT_TYPE):
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
     logger.error("Произошла ошибка при обработке обновления:", exc_info=context.error)
 
-api_token = "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"
+API_TOKEN = os.getenv("API_TOKEN")
 system_prompt = ""
 MODEL_ID = "tngtech/deepseek-r1t2-chimera:free"
 API_URL = f"https://openrouter.ai/api/v1/chat/completions"
@@ -62,7 +66,7 @@ async def gen_mesage_hug(prompt):
     context_messages.append(f"\nПользователь: {prompt}")
     context_str = context_str + f"\nНовое сообщение: {prompt}"
     headers = {
-        "Authorization": f"Bearer {api_token}", 
+        "Authorization": f"Bearer {API_TOKEN}", 
     }
     data = {
         "model": MODEL_ID,
@@ -177,7 +181,7 @@ async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 #from yandex_music import Client
 
-YA_TOKEN = "y0__xCgoanTAxje-AYgnc3ruBIdszBHxDlqCEmFDfA3U7-h_jmnFg"
+YA_TOKEN = os.getenv("YA_TOKEN")
 
 from ya_down import *
 
