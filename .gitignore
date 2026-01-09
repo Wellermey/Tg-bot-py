@@ -1,2 +1,21 @@
+```gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Environment
 .env
-bot.log
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+```
