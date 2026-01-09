@@ -68,7 +68,6 @@ async def get_track(track_name):
 
         audio.save()
         return [file_name,artists]
-        await delayed_remove(file_name)
     else:
         return 2
 
