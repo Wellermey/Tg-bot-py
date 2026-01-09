@@ -3,8 +3,11 @@ from mutagen.id3 import ID3, APIC, TPE1, TIT2, TALB, TDRC, TRCK, error as ID3Err
 from mutagen.mp3 import MP3
 import asyncio
 import os
+from dotenv import load_dotenv
 
-YA_TOKEN = "y0__xCgoanTAxje-AYgnc3ruBIdszBHxDlqCEmFDfA3U7-h_jmnFg"
+load_dotenv()
+
+YA_TOKEN = os.getenv("YA_TOKEN")
 
 async def delayed_remove(file_path):
     await asyncio.sleep(2)  # Ждем 2 секунды
