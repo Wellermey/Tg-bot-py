@@ -17,6 +17,7 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 /ai    - отвечает на промпт
 /mod   - выбор модели
 /help  - помогает
+/joke  - анекдот
 /clear - очистка истории
 /music - трек по названию 
         """
