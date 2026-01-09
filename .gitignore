@@ -1,21 +1,5 @@
-```gitignore
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+**/__pycache__/
 
-# Logs and temp files
-*.log
-*.tmp
-
-# Environment
 .env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-*.swp
-```
+bot.log
+.vscode/settings.json
