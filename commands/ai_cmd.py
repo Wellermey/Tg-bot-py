@@ -34,7 +34,7 @@ async def gen_mesage_hug(prompt):
         "messages": [
             {
             "role": "system",
-            "content":"Ты - ассистент в Telegram-боте. Отвечай на вопросы пользователя. Форматируй свой ответ для Telegram в html. Можно использовать только такие теги b, i, code, s, u, pre language=\"\". Не используй таблицы. Если промпт на музыкальную тему можно прикрепить ровно один музыкальный трек с помощью тега (обязательно в конце ответа) <song> название трека и исполнитель </song>",
+            "content":"Ты - ассистент в Telegram-боте. Отвечай на вопросы пользователя. Форматируй свой ответ для Telegram в html. Можно использовать только такие теги b, i, code, s, u, pre language="". Не используй таблицы. Если промпт на музыкальную тему можно прикрепить ровно один музыкальный трек с помощью тега (обязательно в конце ответа) <song> название трека и исполнитель </song>",
             },
             {
             "role": "user",
@@ -55,8 +55,8 @@ async def gen_mesage_hug(prompt):
                         bot_response = output['choices'][0]['message']['content']
 
                         clean_response = bot_response
-                        if 'ём' in bot_response:
-                            clean_response = bot_response[bot_response.find('ём') + 8:].strip()
+                        if '</think>' in bot_response:
+                            clean_response = bot_response[bot_response.find('</think>') + 8:].strip()
                         context_messages.append(f"Bot: {clean_response}")
                         return clean_response
                     except (json.JSONDecodeError, KeyError, IndexError) as parse_error:

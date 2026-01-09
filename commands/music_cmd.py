@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 YA_TOKEN = os.getenv("YA_TOKEN")
 
 async def send_track(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    track_name = " ".join(context.args or [])
+    track_name = " ".join(context.args)
     user = update.effective_user
     chat_id = update.effective_chat.id
     logger.info(f"Команда: /music, Пользователь: {user.full_name} (@{user.username or 'N/A'}), ID: {user.id}, Время: {time.strftime('%Y-%m-%d %H:%M:%S')}, Контекст: {track_name}")
@@ -28,7 +28,7 @@ async def send_track(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if err != 2:
         print(err)
         artists = ' / '.join(err[1])
-        x = 3
+        x = 5
         while x:
             try:
                 await update.message.reply_audio(

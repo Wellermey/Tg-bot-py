@@ -4,3 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 ```
+
+.env
+bot.log
+.vscode/settings.json
