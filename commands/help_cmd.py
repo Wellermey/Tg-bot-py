@@ -13,10 +13,12 @@ async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         rf""" 
 <b>Доступные команды:</b>
-/hi - пишет Хай!
-/ai - отвечает на промпт
-/mod - выбор модели
+/hi    - пишет Хай!
+/ai    - отвечает на промпт
+/mod   - выбор модели
+/help  - помогает
 /clear - очистка истории
+/music - трек по названию 
         """
 
     )
