@@ -1,0 +1,164 @@
+2026-01-08 22:24:16,490 - INFO - Команда: /ai, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:24:16, Контекст: Назови лучший трек Battle beast
+2026-01-08 22:24:22,943 - ERROR - Ошибка API: статус 401, ответ: {"error":{"message":"User not found.","code":401}}
+2026-01-08 22:24:23,180 - INFO - Команда: /ai, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:24:23, Контекст: Ошибка API: статус 401. Ответ: {"error":{"message":"User not found.","code":401}}
+2026-01-08 22:24:51,013 - INFO - Команда: /music, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:24:51, Контекст: battle beast
+2026-01-08 22:32:20,944 - INFO - Команда: /ai, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:32:20, Контекст: Назови трек с лучшей партией басс гитары у группы Metallica
+2026-01-08 22:32:54,785 - INFO - Команда: /music, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:32:54, Контекст: Orion - Metallica
+2026-01-08 22:33:20,437 - INFO - Команда: /ai, Пользователь: Константин Толоконцев (@Wellermey), ID: 5584417531, Время: 2026-01-08 22:33:20, Контекст: 
+
+<b>🌩️ Orion (Master of Puppets, 1986)</b>  
+iЧасто считается вершиной басового творчества Клиффа Бёртона в Metallica. В инструментальной середине трека бас-гитара вступает в диалог с соло-гитарами, создавая эпичную многослойную текстуру. Это не просто аккомпанемент — бас здесь<i> ведёт мелодию</i> и демонстрирует джазовое влияние легендарного музыканта. 🎸  
+
+
+2026-01-08 22:34:21,681 - ERROR - Ошибка при генерации ответа
+Traceback (most recent call last):
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        pool_request.request
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\request\_httpxrequest.py", line 279, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tolok\3D Objects\tg-git\Tg-bot-py\main.py", line 150, in generate
+    await update.message.reply_html(ans)
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\_message.py", line 2310, in reply_html
+    return await self.get_bot().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\ext\_extbot.py", line 3107, in send_message
+    return await super().send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<23 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\_bot.py", line 1118, in send_message
+    return await self._send_message(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<21 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\ext\_extbot.py", line 634, in _send_message
+    result = await super()._send_message(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<23 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\_bot.py", line 819, in _send_message
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\_bot.py", line 703, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\ext\_extbot.py", line 372, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\_bot.py", line 732, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\request\_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\request\_baserequest.py", line 305, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "C:\Users\tolok\AppData\Local\Programs\Python\Python313\Lib\site-packages\telegram\request\_httpxrequest.py", line 296, in do_request
+    raise TimedOut from err
+telegram.error.TimedOut: Timed out
