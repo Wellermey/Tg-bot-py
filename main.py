@@ -170,11 +170,11 @@ async def ask_models(update: Update, context: ContextTypes.DEFAULT_TYPE):
             if 0 < type and type <= num:
                 global MODEL_ID
                 MODEL_ID = models[type-1][0]
-                await update.message.reply_txt(f"Текущая модель: {models[type-1][1]}")
+                await update.message.reply_text(f"Текущая модель: {models[type-1][1]}")
             else:
-                await update.message.reply_txt(f"❌ Номер моедли должен быть от 1 до {num}")
+                await update.message.reply_text(f"❌ Номер моедли должен быть от 1 до {num}")
         except:
-            await update.message.reply_txt(f"❌ Номер модели должен быть числом")
+            await update.message.reply_text(f"❌ Номер модели должен быть числом")
 
 async def clear(update: Update, context: ContextTypes.DEFAULT_TYPE):
     global context_messages 
@@ -214,6 +214,7 @@ async def send_track(update: Update, context: ContextTypes.DEFAULT_TYPE):
             except TelegramError as e:
                 x-=1
                 print("ERROR")
+                logger.error(f"Ошибка при отправке аудио: {e}")
         await delayed_remove(err[0])
     else:
         await update.message.reply_text("❌ Трек не найден.")
