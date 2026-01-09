@@ -6,6 +6,7 @@ import time
 import base64   
 from telegram import *
 from telegram.ext import *
+from telegram.error import *
 import os
 from dotenv import load_dotenv
 import os
