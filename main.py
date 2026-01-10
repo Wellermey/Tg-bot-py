@@ -13,6 +13,7 @@ from commands.music_cmd import send_track
 from commands.joke_cmd import send_random_joke
 from commands.error_handler import error_handler
 from jokes import initialize_caches
+from commands.img_cmd import send_img, ask_pmod
 
 load_dotenv()
 
@@ -40,6 +41,8 @@ def main():
     app.add_handler(CommandHandler("music", send_track))
     app.add_handler(CommandHandler("clear", clear))
     app.add_handler(CommandHandler("joke", send_random_joke))
+    app.add_handler(CommandHandler("photo", send_img))
+    app.add_handler(CommandHandler("pmod", ask_pmod))
 
     app.add_error_handler(error_handler)
 

@@ -12,8 +12,8 @@ YA_TOKEN = os.getenv("YA_TOKEN")
 async def delayed_remove(file_path):
     await asyncio.sleep(2)  # Ждем 2 секунды
     try:
-        os.remove(f'{file_path}.mp3')
         os.remove(f'{file_path}.jpg')
+        os.remove(f'{file_path}.mp3')
     except FileNotFoundError:
         pass  # файл уже удален или не существует
     except Exception as e:
